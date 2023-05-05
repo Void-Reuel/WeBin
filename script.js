@@ -1,4 +1,3 @@
-
 let MRIC;
 let n;
 let num;
@@ -326,6 +325,7 @@ function start()
     
     document.getElementById("backdoc").style.transform = "scale(0.00)";
     document.getElementById("doc").style.display = "none";
+    document.getElementById("doc").style.transform = "scale(0.00)";
     document.getElementById("docu").style.display = "none";
 }
 
@@ -338,6 +338,7 @@ function not()
     document.getElementById("backdoc").style.transition = "0.3s";
     document.getElementById("backdoc").style.transform = "scale(1.00)";
 
+    document.getElementById("doc").style.transform = "scale(1.00)";
     gsap.set("#doc", {display: ""});
     gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
 }
@@ -357,6 +358,7 @@ function documento()
     gsap.to("#doc", {opacity: 0, duration: 0.2, onComplete: function() {
         gsap.set("#doc", {display: "none"});
     }});
+    document.getElementById("doc").style.transform = "scale(0.00)";
 }
 
 function documentoc()
@@ -364,6 +366,7 @@ function documentoc()
     document.getElementById("backdoc").style.transition = "0.3s";
     document.getElementById("backdoc").style.transform = "scale(1.00)";
 
+    document.getElementById("doc").style.transform = "scale(1.00)";
     gsap.set("#doc", {display: ""});
     gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
 
