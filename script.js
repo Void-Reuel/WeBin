@@ -1,3 +1,4 @@
+
 let MRIC;
 let n;
 let num;
@@ -15,6 +16,7 @@ let Car = 0;
 let Ind = 0;
 let Org = 0;
 let E = 0;
+let BarraR = 0;
 
 function searchCod()
 {
@@ -263,6 +265,7 @@ function Vsearch()
 
 function search()
 {
+    BarraR = 1;
     document.getElementById("backsearch").style.width = "auto";
     document.getElementById("backsearch").style.right = "20px";
     document.getElementById("Canc").style.display = "";
@@ -312,6 +315,8 @@ function canc()
 
         gsap.set("#doc", {display: ""});
         gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.4});
+
+        BarraR = 0;
     }
 
 }
@@ -335,12 +340,17 @@ function not()
         gsap.set("#notifica", {display: "none"});
     }});
 
-    document.getElementById("backdoc").style.transition = "0.3s";
     document.getElementById("backdoc").style.transform = "scale(1.00)";
 
     document.getElementById("doc").style.transform = "scale(1.00)";
-    gsap.set("#doc", {display: ""});
-    gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
+
+    if(BarraR == 0)
+    {
+        document.getElementById("backdoc").style.transition = "0.3s";
+        
+        gsap.set("#doc", {display: ""});
+        gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
+    }
 }
 
 function Photo()
@@ -363,12 +373,16 @@ function documento()
 
 function documentoc()
 {
-    document.getElementById("backdoc").style.transition = "0.3s";
+
     document.getElementById("backdoc").style.transform = "scale(1.00)";
 
     document.getElementById("doc").style.transform = "scale(1.00)";
-    gsap.set("#doc", {display: ""});
-    gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
+
+    if (BarraR == 0){
+        document.getElementById("backdoc").style.transition = "0.3s";
+        gsap.set("#doc", {display: ""});
+        gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
+    }
 
     gsap.to("#docu", {opacity: 0, duration: 0.2, onComplete: function() {
         gsap.set("#docu", {display: "none"});
