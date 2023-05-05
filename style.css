@@ -178,6 +178,12 @@ button.button3 /*bottone cerca*/
     border-radius: 50px;
     border: none;
     background-color: transparent;
+    transition: 0.2s;
+}
+
+button.button3:active
+{
+    transform: scale(0.90);
 }
 
 button.button4 /*bottone documenti*/
