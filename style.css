@@ -225,7 +225,7 @@ button.button4 /*bottone documenti*/
     color: white;
     width: 100%;
     margin: 10px 0;
-    border-radius: 20px;
+    border-radius: 30px 30px 0 0;
 }
 
 .content-containerE {
@@ -234,7 +234,7 @@ button.button4 /*bottone documenti*/
     color: white;
     width: 100%;
     margin: -30px 0 10px 0;
-    border-radius: 0 0 10px 20px;
+    border-radius: 0 0 10px 30px;
     overflow-y: scroll;
     scrollbar-color: rgb(32, 22, 43) rgb(63, 71, 63)en;
     scrollbar-width: thin;
