@@ -92,7 +92,7 @@ div.all
     height: 80px;
     min-width: 80px;
     border-radius: 40px 40px 40px 40px;
-    transition: right 0.3s;
+    transition: right 0.5s;
 }
 
 #backphoto /*retro logo photo*/
