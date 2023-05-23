@@ -1,12 +1,4 @@
-document.getElementById("Err").style.display = "none";
-document.getElementById("sear").style.display = "none";
-document.getElementById("Canc").style.display = "none";
-document.getElementById("Ricerca").style.display = "none";
-    
-document.getElementById("backdoc").style.transform = "scale(0.00)";
-document.getElementById("doc").style.display = "none";
-document.getElementById("doc").style.transform = "scale(0.00)";
-document.getElementById("docu").style.display = "none";
+
 
 
 let MRIC;
@@ -333,7 +325,15 @@ function canc()
 
 function start()
 {
+    document.getElementById("Err").style.display = "none";
+    document.getElementById("sear").style.display = "none";
+    document.getElementById("Canc").style.display = "none";
+    document.getElementById("Ricerca").style.display = "none";
     
+    document.getElementById("backdoc").style.transform = "scale(0.00)";
+    document.getElementById("doc").style.display = "none";
+    document.getElementById("doc").style.transform = "scale(0.00)";
+    document.getElementById("docu").style.display = "none";
 }
 
 function not()
