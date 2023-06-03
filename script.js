@@ -405,7 +405,7 @@ function scrollFunction() {
         document.getElementById("title").style.borderRadius = "0px";
         document.getElementById("logo").style.height = "40px";
 
-        document.getElementById("sezioni").style.top = "70px";
+        document.getElementById("sezioni").style.top = "68px";
         document.getElementById("sezioni").style.padding = "10px 0";
     } else {
         document.getElementById("title").style.backgroundColor = "#303134";
@@ -426,7 +426,7 @@ function sezioni()
         document.getElementById("title").style.borderRadius = "0px";
         document.getElementById("logo").style.height = "40px";
 
-        document.getElementById("sezioni").style.top = "70px";
+        document.getElementById("sezioni").style.top = "68px";
         document.getElementById("sezioni").style.padding = "10px 0";
         
         sez = 1;
