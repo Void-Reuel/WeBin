@@ -257,7 +257,6 @@ function searchCod()
     }
     else {
         document.getElementById("sear").style.backgroundColor = "#303134";
-        document.getElementById("sear").style.boxShadow = "0 7px 11px 0 #5a5a5a8c";
         document.getElementById("sear").innerHTML = MRIC;
         document.getElementById("sear").style.top = "160px";
     }
