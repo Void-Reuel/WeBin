@@ -409,7 +409,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
+    if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110)
     {
         if (BarraR == 1){
             document.getElementById("backsearch").style.right = "90%";
