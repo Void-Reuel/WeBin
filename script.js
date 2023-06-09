@@ -333,7 +333,7 @@ function canc()
 function start()
 {
     document.getElementById("Err").style.display = "none";
-    document.getElementById("sear").style.display = "none";
+    
     document.getElementById("Canc").style.display = "none";
     document.getElementById("Ricerca").style.display = "none";
     
