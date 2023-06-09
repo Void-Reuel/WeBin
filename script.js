@@ -255,8 +255,8 @@ function searchCod()
         document.getElementById("sear").style.top = "210px";
     }
     else {
-        document.getElementById("sear").style.backgroundColor = "#303134";
-        document.getElementById("sear").style.boxShadow = "0 7px 11px 0 #5a5a5a8c";
+        document.getElementById("sear").style.backgroudColor = "#303134";
+        document.getElementById("sear").style.display = "";
         document.getElementById("sear").innerHTML = MRIC;
         document.getElementById("sear").style.top = "160px";
     }
@@ -279,9 +279,6 @@ function search()
     document.getElementById("Canc").style.right = "30px";
     document.getElementById("Ricerca").style.display = "";
     document.getElementById("lente").style.display = "none";
-    document.getElementById("sear").style.display = "";
-    document.getElementById("sear").style.backgroundColor = "transparent";
-    document.getElementById("sear").style.boxShadow = "0 0 0 0";
 
     gsap.to("#backphoto", {opacity: 0, duration: 0.1, onComplete: function() {
         gsap.set("#backphoto", {display: "none"});
