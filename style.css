@@ -14,6 +14,7 @@ div.all
     position: relative;
     width: auto;
     max-width: 450px;
+    min-width: 350px;
     height: auto;
     margin: 0 auto;
 }
@@ -91,7 +92,7 @@ button.button0:active
 .searchM
 {
     position: absolute;
-    z-index: -2;
+    z-index: 1;
     left: 70px;
     right: 70px;
     padding: 10px;
