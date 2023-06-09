@@ -1,388 +1,538 @@
-<html>
 
-
-    <head>
-        <title>
-            WeBin
-        </title>
-
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Staatliches">
-
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-
-    </head>
-
-
-    <body style="margin:0; background-color: #dfdfdf;" onload="start()"></body>
-
-        <div id="body">
-
-            <div class="all" id="all">
-
-
-                <!--
-
-                    Logo
-
-
-                    Colore sfondo alternativo: #202124
-
-                -->
-
-
-                <div id="sezioni">
-
-                    <button type="button0" class="button0" onclick="Lent()"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #f5f5f5;  margin: 0 10px "></i></button>
-                    <button type="button0" class="button0" onclick="Mapp()"><i class="fa-solid fa-location-dot fa-lg" style="color: #f5f5f5; margin: 0 10px "></i></button>
-
-                </div>
-
-                <div id="title" onclick="sezioni()">
-
-                    <img id="logo" style="padding:15px" src="Photos/LOGO.png">
-
-                </div>
-
-
-
-
-                <!--
-
-                    Tutta la sezione di ricerca
-
-                -->
-
-
-                    <div id="Lente">
-
-                        <!--
-
-                            Barra di ricerca
-
-                            inserire su tutto classe shadow per l'ombra
-
-                        -->
-
-                        <div class="searchM" id="sear" onclick="Vsearch()"></div>
-
-                        <div id="backphoto"></div>
-
-                        <div id="backdoc"></div>
-
-                        <div id="backsearch"></div>
-
-                        <button type="button3" class="button3" id="backphoto" onclick="Photo()">
-                            <i class="fa-solid fa-camera fa-2xl" style="color: #dfdfdf;"></i>
-                        </button>
-
-                        <button type="button4" class="button4" id="doc" onclick="documento()">
-                            <i class="fa-solid fa-envelope fa-2xl" style="color: #dfdfdf;"></i>
-                        </button>
-
-                        <input type="text" class="search" onkeyup="searchCod()" placeholder="Cerca" id="Ricerca">
-
-                        <button type="button1" class="button1" id="lente" onclick="search()">
-                            <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #dfdfdf;"></i>
-                        </button>
-
-                        <button type="button2" class="button2" id="Canc" onclick="canc()">
-                            <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #dfdfdf;"></i>
-                        </button>
-
-                        
-
-
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-                        <!--
-
-                            Messaggio di avviso
-
-                        -->
-
-
-                        
-                        <div id="notifica" class="notifica">
-                            Si avvisa che gli elenchi non sono ancora completi
-                            <br><br>
-                            è consigliabile consultare le regole del proprio comune 
-                            per sapere dove buttare gli oggetti classificati come "speciali"
-                            <br>
-                            <br>
-                            <div id="notificaC" class="notificaC" onclick="not()">
-                                Conferma
-                            </div>
-                        </div>
-
-                        <div id="docu" class="notifica">
-                            <div id="lax" onclick="documentoc()">
-                                <i class="fa-solid fa-xmark fa-lg" style="color: #dfdfdf"></i>
-                            </div>
-                            <br>
-                            gli elenchi non sono ancora completi
-                            <br> 
-                            ma puoi dare il tuo aiuto inviando ciò che sai 
-                            (oggetti e dove vanno buttati) alla mail sottostante
-
-                            <br>
-                            <br>
-
-                            <div id="invia" class="notificaC">
-                                <a href= "mailto:we.bin.help@gmail.com">
-                                    <font color="white">
-                                        Invia
-                                    </font>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <!--
-
-                            Bidoni
-
-                        -->
-
-                        <br>
-                        <div class="flex-container">
-
-                            <div class="column" id="plastica">
-
-                                <div class="content-container shadow"> 
-                                    Plastica 
-                                    <br>
-                                    <img src="Photos/Plastica.png" height="60%">
-                                </div>
-
-                                <div class="content-containerE shadow"> 
-                                    <ul id="elenco1">
-                                        <li>Bottiglie di plastica</li>
-                                        <li>Flaconi di detersivi</li>
-                                        <li>Piatti di plastica</li>
-                                        <li>Bicchieri di plastica</li>
-                                        <li>Busta di plastica</li>
-                                        <li>Busta per pasta</li>
-                                        <li>Busta per riso</li>
-                                        <li>Busta per biscotti</li>
-                                        <li>Imballaggi in plastica</li>
-                                        <li>Imballaggi per capi d'abbigliamento</li>
-                                        <li>Rete per la frutta e verdura</li>
-                                        <li>Confezione per sottilette</li>
-                                        <li>Vachetta per salumi</li>
-                                        <li>Vaschetta per formaggi</li>
-                                        <li>Vaschetta del gelato</li>
-                                        <li>Vassoio per dolcini</li>
-                                        <li>Blister trasparenti preformati</li>
-                                        <li>Vaschetta portauova</li>
-                                        <li>Vaschette per ortofrutta</li>
-                                        <li>Bustina per merendina</li>
-                                        <li>Cellofan</li>
-                                        <li>Imballaggi trasparenti</li>
-                                        <li>Vasetti creme</li>
-                                        <li>Vasetti salse</li>
-                                        <li>Lattine</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div class="column" id="vetro">
-
-                                <div class="content-container shadow">
-                                    Vetro 
-                                    <br>
-                                    <img src="Photos/Vetro.png" height="60%">
-                                </div>
-
-                                <div class="content-containerE shadow">
-                                    <ul id="elenco2">
-                                        <li>Barattoli di vetro</li>
-                                        <li>Bottigliette di vetro</li>
-                                        <li>Bottiglie di vetro</li>
-                                        <li>Vasetti di vetro</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div class="column" id="carta">
-
-                                <div class="content-container shadow">
-                                    Carta 
-                                    <br>
-                                    <img src="Photos/Carta.png" height="60%">
-                                </div>
-
-                                <div class="content-containerE shadow"> 
-                                    <ul id="elenco3">
-                                        <li>Carta (nell'indifferenziato se sporco)</li>
-                                        <li>Cartone della pizza (nell'indifferenziato se sporco)</li>
-                                        <li>Quaderni</li>
-                                        <li>Giornali</li>
-                                        <li>Libri</li>
-                                        <li>Scatole delle scape</li>
-                                        <li>Scatole per alimenti</li>
-                                        <li>Carta da pacchi</li>
-                                        <li>Confezioni in tetrapack</li>
-                                        <li>Cartoni per bevande</li>
-                                        <li>Fogli di carta</li>
-                                        <li>Scatole</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div class="column" id="indifferenziato">
-
-                                <div class="content-container shadow">
-                                    Indifferenziato
-                                    <br>
-                                    <img src="Photos/Indifferenziato.png" height="60%">
-                                </div>
-
-                                <div class="content-containerE shadow"> 
-                                    <ul id="elenco4">
-                                        <li>Gomma</li>
-                                        <li>Stracci</li>
-                                        <li>Ceramica</li>
-                                        <li>Porcellana</li>
-                                        <li>Cristallo</li>
-                                        <li>Terracotta</li>
-                                        <li>Carta Carbone</li>
-                                        <li>Carta Oleata</li>
-                                        <li>Pannolini e Assorbenti</li>
-                                        <li>CD e DVD</li>
-                                        <li>Penne e Pennarelli</li>
-                                        <li>Sacchi per aspirapolvere</li>
-                                        <li>Spazzolini</li>
-                                        <li>Rasoi in plastica</li>
-                                        <li>Collant</li>
-                                        <li>Posate in plastica</li>
-                                        <li>Reuel</li>
-                                        <li>Lettiere per animali domestici</li>
-                                        <li>Magliette</li>
-                                    </ul>
-                                </div>
-                            
-                            </div>
-
-                            <div class="column" id="organico">
-                                
-                                <div class="content-container shadow"> 
-                                    Organico 
-                                    <br>
-                                    <img src="Photos/Organico.png" height="60%">
-                                </div>
-
-                                <div class="content-containerE shadow">
-                                    <ul id="elenco5">
-                                        <li>Avanzi di cibo</li>
-                                        <li>Caffè</li>
-                                        <li>Carta da cucina bianca</li>
-                                        <li>Tovaglioli di carta</li>
-                                        <li>Fiori secchi e recisi</li>
-                                        <li>Filtri di the, tisane</li>
-                                        <li>Pezzetti di legno, paglia, segatura, cenere di legna spenta</li>
-                                        <li>Piatti, bicchieri, posate biodegradabili e compostabili</li>
-                                        <li>Sfalci d'erba</li>
-                                        <li>Potature siepi</li>
-                                        <li>Ramaglie</li>
-                                        <li>Foglie</li>
-                                        <li>Terriccio</li>
-                                        <li>Cortecce</li>
-                                        <li>Piante domestiche</li>
-                                        <li>Fazzoletti</li>
-                                    </ul>
-                                </div>
-                                
-                            </div>
-
-                        </div>
-
-
-                        <!--
-
-                            Errore
-
-                        -->
-
-                        <div class="Errore" id="Err">
-                            Nessun risultato
-                        </div>
-
-
-                        <br><br><br><br><br><br>
-
-                    </div>
-                
-                
-                <!--
-
-
-                    tutta la sezione per la mappa
-
-
-                -->
-
-
-                    <div id="Mappe">
-
-                        <br><br><br><br><br><br><br>
-
-                        <div id="RC" class="RicercaMap">
-
-                            <div id="NotM" class="notificaM">
-                                Ad ora la mappa potrebbe essere vuota
-                                <br><br>
-                                A breve verranno introdotti in questa schermata i punti di raccolta per ogni comune
-                                <br><br>
-                                (Questa schermata è ancora una beta)
-                                <br>
-                                <br>
-                                <div id="NotMc" class="notificaC" onclick="ConfMapp()">
-                                    Conferma
-                                </div>
-                            </div>
-
-                            <input type="text" class="searchMAP" onkeyup="Risp()" placeholder="Cerca" id="RicercaM">
-
-                        </div>  
-                        <div id="Risposta" class="RispMAP">
-                        </div>  
-
-                        <br>
-                        <br>
-                        
-                        <div class="SMap">
-
-                            <br>
-
-                            trova i punti di raccolta
-                            <br> più vicini a te
-
-                            <br><br>
-
-                            <div class="google-maps">
-                                <iframe src="https://www.google.com/maps/embed?........." frameborder="0" style="border:0" allowfullscreen></iframe>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-            </div>
-
-        </div>
-
-    </body>
-
-</html>
+//variabili 
+
+let MRIC;
+let Mris;
+let n;
+let num;
+var input; 
+var filtro;
+var lista;
+var voci;
+var x;
+var i;
+var testo;
+let click = 1;
+let Pla = 0;
+let Vet = 0;
+let Car = 0;
+let Ind = 0;
+let Org = 0;
+let E = 0;
+let BarraR = 0;
+let sez = 0;
+
+let pages = 2;
+
+//tutta la parte dedicata alla ricerca e bottoni vari
+
+function searchCod()
+{
+    
+    click = 0;
+
+    input = document.getElementById("Ricerca");
+
+    filtro = input.value.toUpperCase();
+
+    num = 5;
+
+    //Plastica
+
+    lista = document.getElementById("elenco1");
+
+    voci = lista.getElementsByTagName("li");
+
+    n = voci.length;
+
+    for (i = 0; i < voci.length; i++) 
+    {
+        x = lista.getElementsByTagName("li")[i];
+        testo = x.textContent || x.innerText;
+        if (testo.toUpperCase().indexOf(filtro) > -1) 
+        {
+            voci[i].style.display = "";
+            MRIC = testo;
+        } 
+        else 
+        {
+            voci[i].style.display = "none";
+            n = n-1;
+        }
+    }
+
+    if (n == 0){
+        gsap.to("#plastica", {opacity: 0, duration: 0.2, onComplete: function() {
+            gsap.set("#plastica", {display: "none"});
+        }});
+        num = num - 1;
+        Pla = 1;
+    }
+    else {
+        gsap.set("#plastica", {display: ""});
+        if (Pla == 1){
+            gsap.fromTo("#plastica", {opacity: 0}, {opacity: 1, duration: 0.2});
+            Pla = 0;
+        }
+    }
+    
+    //Vetro
+
+    lista = document.getElementById("elenco2");
+
+    voci = lista.getElementsByTagName("li");
+
+    n = voci.length;
+
+    for (i = 0; i < voci.length; i++) 
+    {
+        x = lista.getElementsByTagName("li")[i];
+        testo = x.textContent || x.innerText;
+        if (testo.toUpperCase().indexOf(filtro) > -1) 
+        {
+            voci[i].style.display = "";
+            MRIC = testo;
+        } 
+        else 
+        {
+            voci[i].style.display = "none";
+            n = n-1;
+        }
+    }
+
+    if (n == 0){
+        gsap.to("#vetro", {opacity: 0, duration: 0.2, onComplete: function() {
+            gsap.set("#vetro", {display: "none"});
+        }});
+        num = num - 1;
+        Vet = 1;
+    }
+    else {
+        gsap.set("#vetro", {display: ""});
+        if (Vet == 1){
+            gsap.fromTo("#vetro", {opacity: 0}, {opacity: 1, duration: 0.2});
+            Vet = 0;
+        }
+    }
+
+
+    //carta
+
+    lista = document.getElementById("elenco3");
+
+    voci = lista.getElementsByTagName("li");
+
+    n = voci.length;
+
+    for (i = 0; i < voci.length; i++) 
+    {
+        x = lista.getElementsByTagName("li")[i];
+        testo = x.textContent || x.innerText;
+        if (testo.toUpperCase().indexOf(filtro) > -1) 
+        {
+            voci[i].style.display = "";
+            MRIC = testo;
+        } 
+        else 
+        {
+            voci[i].style.display = "none";
+            n = n-1;
+        }
+    }
+
+    if (n == 0){
+        gsap.to("#carta", {opacity: 0, duration: 0.2, onComplete: function() {
+            gsap.set("#carta", {display: "none"});
+        }});
+        num = num - 1;
+        Car = 1;
+    }
+    else {
+        gsap.set("#carta", {display: ""});
+        if (Car == 1){
+            gsap.fromTo("#carta", {opacity: 0}, {opacity: 1, duration: 0.2});
+            Car = 0;
+        }
+    }
+
+
+    //indifferenziata
+
+    lista = document.getElementById("elenco4");
+
+    voci = lista.getElementsByTagName("li");
+
+    n = voci.length;
+
+    for (i = 0; i < voci.length; i++) 
+    {
+        x = lista.getElementsByTagName("li")[i];
+        testo = x.textContent || x.innerText;
+        if (testo.toUpperCase().indexOf(filtro) > -1) 
+        {
+            voci[i].style.display = "";
+            MRIC = testo;
+        } 
+        else 
+        {
+            voci[i].style.display = "none";
+            n = n-1;
+        }
+    }
+
+    if (n == 0){
+        gsap.to("#indifferenziato", {opacity: 0, duration: 0.2, onComplete: function() {
+            gsap.set("#indifferenziato", {display: "none"});
+        }});
+        num = num - 1;
+        Ind = 1;
+    }
+    else {
+        gsap.set("#indifferenziato", {display: ""});
+        if (Ind == 1){
+            gsap.fromTo("#indifferenziato", {opacity: 0}, {opacity: 1, duration: 0.2});
+            Ind = 0;
+        }
+    }
+
+
+    //Organico
+
+    lista = document.getElementById("elenco5");
+
+    voci = lista.getElementsByTagName("li");
+
+    n = voci.length;
+
+    for (i = 0; i < voci.length; i++) 
+    {
+        x = lista.getElementsByTagName("li")[i];
+        testo = x.textContent || x.innerText;
+        if (testo.toUpperCase().indexOf(filtro) > -1) 
+        {
+            voci[i].style.display = "";
+            MRIC = testo;
+
+        } 
+        else 
+        {
+            voci[i].style.display = "none";
+            n = n-1;
+        }
+    }
+
+    if (n == 0){
+        gsap.to("#organico", {opacity: 0, duration: 0.2, onComplete: function() {
+            gsap.set("#organico", {display: "none"});
+        }});
+        num = num - 1;
+        Org = 1;
+    }
+    else {
+        gsap.set("#organico", {display: ""});
+        if (Org == 1){
+            gsap.fromTo("#organico", {opacity: 0}, {opacity: 1, duration: 0.2});
+            Org = 0;
+        }
+    }
+
+
+    if (num == 0){
+        gsap.set("#Err", {display: ""});
+        if (E == 1){
+            gsap.fromTo("#Err", {opacity: 0}, {opacity: 1, duration: 0.2});
+            E = 0;
+        }
+    }
+    else {
+        gsap.to("#Err", {opacity: 0, duration: 0.2, onComplete: function() {
+            gsap.set("#Err", {display: "none"});
+        }});
+        E = 1;
+    }
+
+
+    if (num == 0 || filtro == ""){
+        document.getElementById("sear").style.top = "210px";
+    }
+    else {
+        document.getElementById("sear").style.backgroundColor = "#303134";
+        document.getElementById("sear").style.boxShadow = "0 7px 11px 0 #5a5a5a8c";
+        document.getElementById("sear").innerHTML = MRIC;
+        document.getElementById("sear").style.top = "160px";
+    }
+
+}
+
+function Vsearch()
+{
+    document.getElementById("Ricerca").value = MRIC;
+    searchCod();
+    document.getElementById("sear").style.top = "210px";
+}
+
+function search()
+{
+    BarraR = 1;
+    document.getElementById("backsearch").style.width = "auto";
+    document.getElementById("backsearch").style.right = "20px";
+    document.getElementById("Canc").style.display = "";
+    document.getElementById("Canc").style.right = "30px";
+    document.getElementById("Ricerca").style.display = "";
+    document.getElementById("lente").style.display = "none";
+    document.getElementById("sear").style.display = "";
+    document.getElementById("sear").style.backgroundColor = "transparent";
+    document.getElementById("sear").style.boxShadow = "0 0 0 0";
+
+    gsap.to("#backphoto", {opacity: 0, duration: 0.1, onComplete: function() {
+        gsap.set("#backphoto", {display: "none"});
+    }});
+
+    gsap.to("#backdoc", {opacity: 0, duration: 0.1, onComplete: function() {
+        gsap.set("#backdoc", {display: "none"});
+    }});
+
+    gsap.to("#doc", {opacity: 0, duration: 0.1, onComplete: function() {
+        gsap.set("doc", {display: "none"});
+    }});
+}
+
+function canc()
+{
+    if(click == 0)
+    {
+        document.getElementById("Ricerca").value = "";
+        searchCod();
+        click = 1;
+    }
+    else 
+    {
+        document.getElementById("backsearch").style.right = "90%";
+        document.getElementById("Canc").style.display = "none";
+        document.getElementById("Ricerca").style.display = "none";
+        document.getElementById("lente").style.display = "";
+        document.getElementById("sear").style.display = "none";
+        click = 1;
+        document.getElementById("sear").innerHTML = "";
+
+        gsap.set("#backphoto", {display: ""});
+        gsap.fromTo("#backphoto", {opacity: 0}, {opacity: 1, duration: 0.6});
+
+        gsap.set("#backdoc", {display: ""});
+        gsap.fromTo("#backdoc", {opacity: 0}, {opacity: 1, duration: 0.1});
+
+        gsap.set("#doc", {display: ""});
+        gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.4});
+
+        BarraR = 0;
+    }
+
+}
+
+
+//rendere questa funzione per tutte le pagine che all'avvio imposta ad 1 e in base a quale pagina si apre modifica la variabile
+function start()
+{
+    document.getElementById("Err").style.display = "none";
+    document.getElementById("sear").style.display = "none";
+    document.getElementById("Canc").style.display = "none";
+    document.getElementById("Ricerca").style.display = "none";
+    
+    document.getElementById("backdoc").style.transform = "scale(0.00)";
+    document.getElementById("doc").style.display = "none";
+    document.getElementById("doc").style.transform = "scale(0.00)";
+    document.getElementById("docu").style.display = "none";
+
+    document.getElementById("Mappe").style.display = "none";
+}
+
+function not()
+{
+    gsap.to("#notifica", {opacity: 0, duration: 0.2, onComplete: function() {
+        gsap.set("#notifica", {display: "none"});
+    }});
+
+    document.getElementById("backdoc").style.transform = "scale(1.00)";
+
+    document.getElementById("doc").style.transform = "scale(1.00)";
+
+    if(BarraR == 0)
+    {
+        document.getElementById("backdoc").style.transition = "0.3s";
+        
+        gsap.set("#doc", {display: ""});
+        gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
+    }
+}
+
+function Photo()
+{
+    alert("La modalità foto non è ancora disponibile");
+}
+
+function documento()
+{
+    gsap.set("#docu", {display: ""});
+    gsap.fromTo("#docu", {opacity: 0}, {opacity: 1, duration: 0.5});
+
+    document.getElementById("backdoc").style.transform = "scale(0.00)";
+
+    gsap.to("#doc", {opacity: 0, duration: 0.2, onComplete: function() {
+        gsap.set("#doc", {display: "none"});
+    }});
+    document.getElementById("doc").style.transform = "scale(0.00)";
+}
+
+function documentoc()
+{
+
+    document.getElementById("backdoc").style.transform = "scale(1.00)";
+
+    document.getElementById("doc").style.transform = "scale(1.00)";
+
+    if (BarraR == 0){
+        document.getElementById("backdoc").style.transition = "0.3s";
+        gsap.set("#doc", {display: ""});
+        gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.5});
+    }
+
+    gsap.to("#docu", {opacity: 0, duration: 0.2, onComplete: function() {
+        gsap.set("#docu", {display: "none"});
+    }});
+}
+
+
+
+//funzione scorrimento e apertura sezioni
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
+    {
+        if (BarraR == 1){
+            document.getElementById("backsearch").style.right = "90%";
+            document.getElementById("Canc").style.display = "none";
+            document.getElementById("Ricerca").style.display = "none";
+            document.getElementById("lente").style.display = "";
+            document.getElementById("sear").style.display = "none";
+            document.getElementById("sear").innerHTML = "";
+
+            gsap.set("#backphoto", {display: ""});
+            gsap.fromTo("#backphoto", {opacity: 0}, {opacity: 1, duration: 0.6});
+
+            gsap.set("#backdoc", {display: ""});
+            gsap.fromTo("#backdoc", {opacity: 0}, {opacity: 1, duration: 0.1});
+
+            gsap.set("#doc", {display: ""});
+            gsap.fromTo("#doc", {opacity: 0}, {opacity: 1, duration: 0.4});
+
+            BarraR = 0;
+        }
+    }
+
+
+    if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+        document.getElementById("title").style.backgroundColor = "black";
+        document.getElementById("title").style.height = "70px";
+        document.getElementById("title").style.borderRadius = "0px";
+        document.getElementById("logo").style.height = "40px";
+
+        document.getElementById("sezioni").style.top = "68px";
+        document.getElementById("sezioni").style.padding = "10px 0";
+    } else {
+        document.getElementById("title").style.backgroundColor = "#303134";
+        document.getElementById("title").style.height = "100px";
+        document.getElementById("title").style.borderRadius = "0px 0px 60px 60px";
+        document.getElementById("logo").style.height = "70px";
+
+        document.getElementById("sezioni").style.top = "0px";
+        document.getElementById("sezioni").style.padding = "0";
+    }
+}
+
+function sezioni()
+{
+    if (sez==0){
+        document.getElementById("title").style.backgroundColor = "black";
+        document.getElementById("title").style.height = "70px";
+        document.getElementById("title").style.borderRadius = "0px";
+        document.getElementById("logo").style.height = "40px";
+
+        document.getElementById("sezioni").style.top = "68px";
+        document.getElementById("sezioni").style.padding = "10px 0";
+        
+        sez = 1;
+    }
+    else{
+        document.getElementById("title").style.backgroundColor = "#303134";
+        document.getElementById("title").style.height = "100px";
+        document.getElementById("title").style.borderRadius = "0px 0px 60px 60px";
+        document.getElementById("logo").style.height = "70px";
+
+        document.getElementById("sezioni").style.top = "0px";
+        document.getElementById("sezioni").style.padding = "0";
+
+        sez = 0;
+    }
+}
+
+function Mapp()
+{
+        document.getElementById("title").style.backgroundColor = "#303134";
+        document.getElementById("title").style.height = "100px";
+        document.getElementById("title").style.borderRadius = "0px 0px 60px 60px";
+        document.getElementById("logo").style.height = "70px";
+
+        document.getElementById("sezioni").style.top = "0px";
+        document.getElementById("sezioni").style.padding = "0";
+
+
+    document.getElementById("RicercaM").style.display = "none";
+    gsap.to("#Lente", {opacity: 0, duration: 0.2, onComplete: function() {
+        gsap.set("#Lente", {display: "none"});
+    }});
+
+    gsap.set("#Mappe", {display: ""});
+    gsap.fromTo("#Mappe", {opacity: 0}, {opacity: 1, duration: 0.4});
+}
+
+
+function Lent()
+{
+        document.getElementById("title").style.backgroundColor = "#303134";
+        document.getElementById("title").style.height = "100px";
+        document.getElementById("title").style.borderRadius = "0px 0px 60px 60px";
+        document.getElementById("logo").style.height = "70px";
+
+        document.getElementById("sezioni").style.top = "0px";
+        document.getElementById("sezioni").style.padding = "0";
+
+
+    gsap.to("#Mappe", {opacity: 0, duration: 0.2, onComplete: function() {
+        gsap.set("#Mappe", {display: "none"});
+    }});
+
+    gsap.set("#Lente", {display: ""});
+    gsap.fromTo("#Lente", {opacity: 0}, {opacity: 1, duration: 0.4});
+}
+
+
+//funzioni relative alla mappa
+
+function ConfMapp()
+{
+    gsap.to("#NotM", {opacity: 0, duration: 0.2, onComplete: function() {
+        gsap.set("#NotM", {display: "none"});
+    }});
+
+    document.getElementById("RC").style.height = "80px";
+    document.getElementById("RC").style.backgroundColor = "#303134";
+    document.getElementById("RicercaM").style.display = "";
+}
+
+function Risp()
+{
+    document.getElementById("Risposta").style.height = "30px";
+}
