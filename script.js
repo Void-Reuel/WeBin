@@ -2,7 +2,6 @@
 //variabili 
 
 let MRIC;
-let Mris;
 let n;
 let num;
 var input; 
