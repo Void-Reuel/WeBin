@@ -36,6 +36,8 @@ let E = 0; //
 
 window.onload = function() {
 
+    document.getElementById("SezRicerca").style.background = "#303134";
+
     var position = document.documentElement.scrollTop || document.body.scrollTop;
 
     window.onscroll = function() {
