@@ -40,7 +40,7 @@ window.onload = function() {
 
     window.onscroll = function() {
         var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scroll > position) {
+        if (scroll > position && scroll != 0) {
 
             //azioni che accadono solamente al momento in cui la parra di ricerca è chiusa
             if (BarraR == 0)
