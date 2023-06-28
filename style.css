@@ -85,16 +85,18 @@
     {
         top:-60px;
         z-index: 3;
+        padding: 4px;
     }
 
     button.button0
     {
         border: none;
         height: 30px;
+        width: 40px;
         /* background-color: rgb(78, 78, 82); */
         background-color: transparent;
         border-radius: 20px;
-        margin: 5px;
+        margin: 1px;
         transition: 0.2s;
     }
 
