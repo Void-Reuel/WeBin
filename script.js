@@ -37,17 +37,6 @@ let E = 0; //
 window.onload = function() {
 
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // il tema del dispositivo è impostato su scuro
-        document.getElementById("all").style.backgroundColor = "#dfdfdf";
-        document.getElementById("all2").style.backgroundColor = "#dfdfdf";
-    } else {
-        // il tema del dispositivo è impostato su chiaro
-        document.getElementById("all").style.backgroundColor = "#ffffff";
-        document.getElementById("all2").style.backgroundColor = "#ffffff";
-    }
-
-
     
 
     document.getElementById("SezRicerca").style.background = "#303134";
