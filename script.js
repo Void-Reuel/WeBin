@@ -63,6 +63,7 @@ window.onload = function() {
                 document.getElementById("sezionitop").style.top = "-90px";
 
                 document.getElementById("sear").style.top = "0px";
+                document.getElementById("spazio").style.height = "80px";
 
                 document.getElementById("search").style.top = "0px";
                 document.getElementById("search").style.width = "100%";
