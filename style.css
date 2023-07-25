@@ -1,0 +1,289 @@
+@import url('http://fonts.googleapis.com/css?family=Staatliches');
+
+
+
+/* 
+    scroolbar (modifica per windows)
+*/
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #303134;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #4d4e52;
+        border-radius: 0 0 10px 10px;
+    }
+
+
+
+/*
+    Tutta la pagina
+*/
+
+    .all
+    {
+        position: relative;
+        width: auto;
+        max-width: 450px;
+        height: 100%;
+        margin: 0 auto;
+        font-family: 'Staatliches', serif;
+        background-color: #ffffff;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+/* 
+    Parte superiore della pagina
+    con valore fixed che permette di rimanere fissa in alto
+
+    disposizione da mantenere allo scorrimento:
+    1 Barra di ricerca (dipende dalle pagine)
+    2.1 Pagine
+    2.2 Logo
+*/
+
+    .top
+    {
+        position: fixed;
+        background-color: #000000;
+        width: auto;
+        height: auto;
+        border-radius: 40px;
+        text-align: center;
+        transition: 0.5s;
+        white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #logotop
+    {
+        top:10px;
+        z-index: 4;
+    }
+
+
+
+    .logo
+    {
+        height: 36px;
+        padding: 10px 50px;
+        transition: 0.3s;
+    }
+
+    #SezB{
+        bottom: 180px;
+        right: 20px;
+        transition: 0.2s;
+    }
+
+    #sezionitop
+    {
+        top:-60px;
+        z-index: 3;
+        padding: 4px;
+    }
+
+    button.button0
+    {
+        border: none;
+        height: 30px;
+        width: 40px;
+        /* background-color: rgb(78, 78, 82); */
+        background-color: transparent;
+        border-radius: 20px;
+        margin: 1px;
+        transition: 0.2s;
+    }
+
+    #search
+    {
+        position: fixed;
+        top: -90px;
+        z-index: 3;
+        display: inline;
+        background-color: #000000;
+        max-width: 450px;
+        min-width: 210px;
+        width: 80%;
+        height: 50px;
+        border-radius: 40px;
+        transition: 0.5s;
+        white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    input.search 
+    {
+        height: 50px;
+        width: 80%;
+        border: none;
+        padding: 10px 10px 10px 15px;
+        font-family: 'Staatliches', serif;
+        background-color: transparent;
+        font-size: 30px;
+        color:#dfdfdf;
+    }
+
+    .searchM
+    {
+        position: fixed;
+        color:#dfdfdf;
+        top: -90px;
+        z-index: 2;
+        font-size: 20px;
+        padding: 10px 15px;
+        width: 60%;
+        height: 20px;
+        overflow: hidden;
+        background-color: #000000;
+        max-width: 400px;
+        min-width: 180px;
+        border-radius: 40px;
+        transition: 0.5s;
+        white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    ::-webkit-input-placeholder { color: #dfdfdf;}
+    ::-moz-input-placeholder { color: #dfdfdf}
+    ::-ms-input-placeholder { color: #dfdfdf}
+
+    input.search:focus 
+    {
+        outline:none;
+    }
+
+    button.buttonC /*bottone cancella*/
+    {
+        position: fixed;
+        right: 15px;
+        border: none;
+        height: 50px;
+        width: auto;
+        padding: 0px;
+        border: none;
+        background-color: transparent;
+    }
+
+    button.buttonC:focus 
+    {
+        outline:none;
+    }
+
+
+
+
+
+/*
+    tutta la schermata home
+*/
+
+
+
+
+
+
+  
+    
+
+
+
+
+/* 
+    Tutta la schermata di ricerca
+*/
+
+
+    /* bottoni fixed */
+
+    button.button1
+    {
+        position: fixed;
+        border: none;
+        height: 60px;
+        width: 60px;
+        background-color: #000000;
+        border-radius: 30px;
+        transition: 0.2s;
+    }
+
+    #SearchB
+    {
+        bottom: 20px;
+        right: 20px;
+        transition: 0.4s;
+    }
+
+    #PhotoB
+    {
+        bottom: 100px;
+        right: 20px;
+        transition: 0.3s;
+    }
+
+
+
+    #spazio
+    {
+        height: 80px;
+        transition: 0.3s;
+    }
+
+
+
+    /* bidoni */
+
+
+    .flex-container {
+        font-size: 15px;
+        width: 95%;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        transition: 0.3s;
+        margin: 0 0 0 2.5%;
+    }
+    
+    .content-container {
+        height: 250px;
+        background: #303134;
+        line-height: 70px;
+        text-align: center;
+        color: white;
+        width: 90%;
+        margin: 20 0 10 5%;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .content-containerE {
+        height: 200px;
+        background: #4d4e52;
+        color: white;
+        width: 90%;
+        margin: -30px 0 0 5%;
+        border-radius: 0 0 10px 40px;
+        overflow-y: scroll;
+        scrollbar-color: rgb(32, 22, 43) rgb(63, 71, 63)en;
+        scrollbar-width: thin;
+    }
+    
+    .column {
+        padding: 0;
+        box-sizing: border-box;
+        flex: 50%;
+        max-width: 50%;
+    }
