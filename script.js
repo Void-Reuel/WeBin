@@ -454,6 +454,7 @@ function Vsearch()
 {
     document.getElementById("Ricerca").value = MRIC;
     searchCod();
+    click = 0;
     document.getElementById("spazio").style.height = "80px";
     document.getElementById("sear").style.top = "10px";
 }
