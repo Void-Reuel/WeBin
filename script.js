@@ -445,3 +445,13 @@ function searchCod()
 
 
 }
+
+
+//quando si clicca sul consiglio
+function Vsearch()
+{
+    document.getElementById("Ricerca").value = MRIC;
+    searchCod();
+    document.getElementById("spazio").style.height = "80px";
+    document.getElementById("sear").style.top = "10px";
+}
