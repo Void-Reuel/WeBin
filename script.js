@@ -147,6 +147,7 @@ function BarrS()
 
     document.getElementById("PhotoB").style.bottom = "20px";
     document.getElementById("SezB").style.bottom = "100px";
+    document.getElementById("SezB").style.right = "20px";
 
     BarraR = 1;
 
