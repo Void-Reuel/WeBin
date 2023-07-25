@@ -182,6 +182,8 @@ function canc()
 
         document.getElementById("spazio").style.height = "80px";
 
+        document.getElementById("SezB").style.right = "20px";
+
         BarraR = 0;
 
         click = 1;
