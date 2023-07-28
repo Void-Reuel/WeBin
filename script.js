@@ -37,6 +37,12 @@ let SezT = 0; //bottone sezioni cliccato
 
 window.onload = function() {
 
+    //operazioni da svolgere al caricamento della pagina (provvisorio)
+
+
+    document.getElementById("Err").style.opacity = "0";
+    
+
     document.getElementById("SezRicerca").style.background = "#303134";
 
     var position = document.documentElement.scrollTop || document.body.scrollTop;
